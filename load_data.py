@@ -15,6 +15,13 @@ db.team.drop()
 
 print("\nAttempting to load data...")
 # Creates a collection in the database and inserts two documents
+
+mars_data=[{'url': 'http://'}]
+
+import scraper
+mars_data=scraper.scrape_all()
+# db.mars.update({'player': 'Jessica'}, {'age': '20'})
+db.mars.replace({}, mars_data, upsert=True)
 db.team.insert_many(
     [
         {
