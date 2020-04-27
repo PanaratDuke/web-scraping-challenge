@@ -21,4 +21,11 @@ print("\nAttempting to load data...")
 # db.replace({}, mars_hemispheres.hemisphere_image_urls, upsert=True)
 db.hemisheres.insert_many([mars_hemispheres.hemisphere_image_urls])
 
+if __name__ == "__main__":
+    # print("\nAttempting to retrieve any loaded data....")
+    # hemisheres = list(db.hemispheres.find())
+    # print("\nOur team data is:\n")
+    # for each_hem in hemispheres:
+    #     print(hemisheres)
+    # print("\nProcess Complete!\n")    
 

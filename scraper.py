@@ -3,6 +3,7 @@ import requests
 import os
 from splinter import Browser
 import pandas as pd
+import time
 
 
 # def get_latest_news():
@@ -16,7 +17,7 @@ url = 'https://mars.nasa.gov/news'
 
     # Read html from website
 browser.visit(url)
-
+time.sleep(3)
     # Variables to store text from website
 top_article_title =""
 top_article_body = ""

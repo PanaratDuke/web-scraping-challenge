@@ -16,11 +16,7 @@ def get_teams():
 print(f"\nHey There, I'm the get data code.  My name is {__name__}")
 
 if __name__ == "__main__":
-    print("\nTesting Data Retrieval:....\n")
-    teams = get_teams()
-    for player in teams:
-        print(player)
-    print("\nProcess Complete!\n")    
+    app.run(debug=True)
 
 
 

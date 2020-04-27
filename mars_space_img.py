@@ -11,6 +11,7 @@ browser = Browser('chrome', **executable_path, headless=False)
 jpl_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
 
 browser.visit(jpl_url)
+time.sleep(3)
 
 feat_img_url = "" 
 feat_img_url_1 = ""
@@ -32,4 +33,4 @@ feat_img_url_2=feat_img_url_1+feat_img_url[1:]
 
 feat_img_dict['feat_img'] = feat_img_url_2
 
-print(feat_img_url_2)
+print(feat_img_dict)
