@@ -78,7 +78,35 @@ def save_feature_image():
     db.feature_image.insert_one(scrape_feature_image())
     print("Success load into database")
 
+def scrape_weather():
+    # Return Var
+    mars_weather = ""
 
+    #---------------- Scrape Weather from Twitter --------------------#
+    twitter_url = 'https://twitter.com/marswxreport?lang=en'
+    browser.visit(twitter_url)
+    time.sleep(3)
+
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+
+    extract_mars_weather = soup.find_all('div', attrs={'data-testid':'tweet'})
+    for each_weather in extract_mars_weather:
+        print(each_weather)
+        mars_weather_info = each_weather.find_all('span')[4].list_text
+        break
+
+    mars_weather = {"mars_weather":mars_weather_info}
+    return mars_weather
+
+def save_weather():
+    conn = 'mongodb://localhost:27017'
+    client = pymongo.MongoClient(conn)
+    db = client.mars_db
+    db.weather.drop()
+    print("\nAttempting to load data...")
+    db.weather.insert_one(scrape_weather())
+    print("Success load into database")
 
 
 def get_latest_news():
