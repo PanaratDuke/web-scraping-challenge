@@ -9,24 +9,22 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 1st Section -->
+    <!-- 1st Section Scrape Button -->
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
             <!-- <button class="btn_scrape_data" style="vertical-align:middle"><span>Scrape New Data</span> -->
-            <button type="button" href='/scrape' class="btn btn-secondary btn-lg btn btn-info">Scrape New Data</button>
-            </button>
+            <p><a role='button' href='/scrape' class="btn btn-secondary btn-lg btn btn-info">Scrape New Data</a></p>
         </div>
     </div>
     
-    <!-- 2nd Section -->
+    <!-- 2nd Section Latest News-->
     <div class="container-fluid">
       <!-- <div class="jumbotron">< -->
           <article>
@@ -37,7 +35,7 @@
       <!-- </div> -->
     </div>
     
-    <!-- 3nd Section -->
+    <!-- 3nd Section Feature Image-->
     <div class="container-fluid"></div>
       <!-- 1st row -->
       <section class="row">
@@ -45,7 +43,7 @@
         <div class="col-lg-8">
           <div class="jumbotron text-left"> 
             <h3>Featured Mars Image</h3>
-            <img src="{{m_fimg.feat_img}}" alt="mars space image">
+            <img src="m_fimg" alt="mars space image">
 
           </div>
         </div>
@@ -53,26 +51,35 @@
             <!-- 2nd Column -->
               
         <div class="col-lg-4">
-          <!--1st Row -->
+          <!--1st Row Current Weather -->
           <section>
               <div class="jumbotron text-left">
                 
                 <h3>Current Weather on Mars</h3>
-                <h2>{{m_weat.mars_weather}}</h2>
+                <!-- <h2></h2> -->
 
               </div>
-              <!--2nd Row -->
+              <!--2nd Row Mars Facts -->
               <div class="jumbotron text-left">
               
 
                   
                 <h3>Mars Facts (table)</h3>
+                <table>
+                  <tr>
+                    <th>column 1</th>
+                    <th>column 2</th>
+                  </tr>
+                  <tr>
+                    <td>first data</td>
+                  </tr>
+                </table>
               </div>
           </section>
         </div>
       </section>
     </div>
-
+    <!-- 4nd Section Hemispheres Image-->
     <div class="container">
       <h2>Mars Hemisphere</h2>
       <p>The .card-columns class creates a masonry-like grid of cards. The layout will automatically adjust as you insert more cards.</p>
@@ -81,28 +88,28 @@
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src=mars_img_dict alt="mars space image">
+            <!-- <img src=mars_img_dict alt="mars space image"> -->
             <p class="card-text">Pic 1</p>
           </div>
         </div>
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src=mars_img_dict alt="mars space image">
+            <!-- <img src=mars_img_dict alt="mars space image"> -->
             <p class="card-text">Pic 2</p>
           </div>
         </div> 
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src=mars_img_dict alt="mars space image">
+            <!-- <img src=mars_img_dict alt="mars space image"> -->
             <p class="card-text">Pic 3</p>
           </div>
         </div>
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src=mars_img_dict alt="mars space image">
+            <!-- <img src=mars_img_dict alt="mars space image"> -->
             <p class="card-text">Pic 4</p>
           </div>
         </div>
