@@ -43,7 +43,7 @@
         <div class="col-lg-8">
           <div class="jumbotron text-left"> 
             <h3>Featured Mars Image</h3>
-            <img src="m_fimg" alt="mars space image">
+            <img src={{m_fimg.feat_img}} alt="mars space image">
 
           </div>
         </div>
@@ -56,7 +56,7 @@
               <div class="jumbotron text-left">
                 
                 <h3>Current Weather on Mars</h3>
-                <!-- <h2></h2> -->
+                <p>{{m_weather.mars_weather}}<p>
 
               </div>
               <!--2nd Row Mars Facts -->
@@ -88,29 +88,33 @@
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <!-- <img src=mars_img_dict alt="mars space image"> -->
-            <p class="card-text">Pic 1</p>
+            <img src={{m_hemis[0]}} alt="mars space image">
+            <p class="card-text">Cerberus Hemisphere Enhanced</p>
           </div>
         </div>
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <!-- <img src=mars_img_dict alt="mars space image"> -->
-            <p class="card-text">Pic 2</p>
+            <img src={{m_hemis[0]}} alt="mars space image">
+            <p class="card-text">Schiaparelli Hemisphere Enhanced
+            </p>
           </div>
         </div> 
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <!-- <img src=mars_img_dict alt="mars space image"> -->
-            <p class="card-text">Pic 3</p>
+            <img src={{m_hemis[0]}} alt="mars space image">
+            <p class="card-text">Syrtis Major Hemisphere Enhanced
+            </p>
           </div>
         </div>
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <!-- <img src=mars_img_dict alt="mars space image"> -->
-            <p class="card-text">Pic 4</p>
+            <img src={{m_hemis[0]}} alt="mars space image">
+            <p class="card-text">Valles Marineris Hemisphere Enhanced
+
+            </p>
           </div>
         </div>
       </div>

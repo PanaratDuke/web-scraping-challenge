@@ -159,10 +159,9 @@ def scrape_hemispheres(browser):
 
     for each_title in titles: 
         key_word = each_title.find('h3').text
-        print(key_word)
         browser.find_link_by_partial_text(key_word).click()
         img_url = browser.find_link_by_text('Sample').first['href']
-        print(img_url)
+        
         hemisphere_image_urls[key_word]=img_url
         browser.back()
 
@@ -177,18 +176,6 @@ def save_hemispheres(browser):
     db.hemispheres.insert_one(scrape_hemispheres(browser))
     print("Success load into database")
 
-# def get_mars_info():
-#     conn = 'mongodb://localhost:27017'
-#     client = pymongo.MongoClient(conn)
-#     db = client.mars_db
-#     latest_news = db.latest_news.find()
-#     # feature_img = db.mars_space_img.find()
-#     # weather = db.weather.find()
-#     # facts = db.facts.find()
-#     # hemisphere = db.hemisphere.find()
-
-#     return (latest_news)
-#     # ,feature_img,weather,facts,hemisphere)
 
 
 
