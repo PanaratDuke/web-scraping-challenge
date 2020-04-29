@@ -126,11 +126,14 @@ def scrape_facts(browser):
     url = 'https://space-facts.com/mars/'
     tables = pd.read_html(url)
     target_table=tables[0]
+    
+    # for each_row in target_table.index:
+    #     each_row_df=target_table.loc[each_row]
+    #     facts_dict[each_row_df[0]]=each_row_df[1]
 
-    for each_row in target_table.index:
-        each_row_df=target_table.loc[each_row]
-        facts_dict[each_row_df[0]]=each_row_df[1]
-
+    target_table.columns=['description', 'values']
+    target_table.set_index('description', inplace=True)
+    facts_dict['facts']=target_table.to_html(classes='table table-striped')
     return facts_dict
 
 def save_facts(browser):
@@ -147,10 +150,10 @@ def scrape_hemispheres(browser):
     img_url = ""
     titles = ""
     # Return Var
-    hemisphere_image_urls ={}
-
-    #---------------- Scrape Facts from Space-Facts --------------------#
+    hemispheres_image_urls ={}
+    #---------------- Scrape Facts from Space-Facts --------------------#    
     usgs_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+
     browser.visit(usgs_url)
     html = browser.html
     
@@ -159,21 +162,29 @@ def scrape_hemispheres(browser):
 
     for each_title in titles: 
         key_word = each_title.find('h3').text
+        print(key_word)
+#     browser.find_link_by_partial_text('Hemisphere Enhanced').click()
         browser.find_link_by_partial_text(key_word).click()
+        key_word=key_word.replace(' ', '_')
+#     print(browser.url)
+    # you can access the attribute using [href]
         img_url = browser.find_link_by_text('Sample').first['href']
-        
-        hemisphere_image_urls[key_word]=img_url
+#     hemisphere_image_urls.update({test.text:img_url})
+        print(img_url)
+        hemispheres_image_urls[key_word]=img_url
         browser.back()
+    
+    print(f"out side for {hemispheres_image_urls}")
 
-    return hemisphere_image_urls
+    return hemispheres_image_urls
     
 def save_hemispheres(browser):
     conn = 'mongodb://localhost:27017'
     client = pymongo.MongoClient(conn)
     db = client.mars_db
-    db.hemispheres.drop()
+    db.hemis.drop()
     print("\nAttempting to load data...")
-    db.hemispheres.insert_one(scrape_hemispheres(browser))
+    db.hemis.insert_one(scrape_hemispheres(browser))
     print("Success load into database")
 
 

@@ -21,7 +21,7 @@ def index():
     mars_space_img=db.mars_space_img.find_one()
     weather=db.weather.find_one()
     facts=db.facts.find_one()
-    hemisphere=db.hemispheres.find()
+    hemispheres=db.hemis.find_one()
     
     # try:
     #     news = mars_scraping.get_mars_info()
@@ -35,7 +35,7 @@ def index():
         m_fimg=mars_space_img,
         m_weather=weather,
         m_fact=facts,
-        m_hemis=hemisphere
+        m_hemis=hemispheres
         )
     
 

@@ -26,7 +26,7 @@
     
     <!-- 2nd Section Latest News-->
     <div class="container-fluid">
-      <!-- <div class="jumbotron">< -->
+          <!-- <div class="jumbotron">< -->
           <article>
               <h1>Latest Mars News</h1>
               <h2>{{m_news.title}}</h2>
@@ -43,7 +43,7 @@
         <div class="col-lg-8">
           <div class="jumbotron text-left"> 
             <h3>Featured Mars Image</h3>
-            <img src={{m_fimg.feat_img}} alt="mars space image">
+            <img src="{{m_fimg.feat_img}}" alt="mars space image"width="500" height="600">
 
           </div>
         </div>
@@ -65,15 +65,7 @@
 
                   
                 <h3>Mars Facts (table)</h3>
-                <table>
-                  <tr>
-                    <th>column 1</th>
-                    <th>column 2</th>
-                  </tr>
-                  <tr>
-                    <td>first data</td>
-                  </tr>
-                </table>
+                {{m_fact.facts | safe}}
               </div>
           </section>
         </div>
@@ -88,14 +80,14 @@
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src={{m_hemis[0]}} alt="mars space image">
+            <img src="{{m_hemis.Cerberus_Hemisphere_Enhanced}}" alt="mars space image">
             <p class="card-text">Cerberus Hemisphere Enhanced</p>
           </div>
         </div>
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src={{m_hemis[0]}} alt="mars space image">
+            <img src="{{m_hemis.Schiaparelli_Hemisphere_Enhanced}}" alt="mars space image">
             <p class="card-text">Schiaparelli Hemisphere Enhanced
             </p>
           </div>
@@ -103,7 +95,7 @@
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src={{m_hemis[0]}} alt="mars space image">
+            <img src="{{m_hemis.Syrtis_Major_Hemisphere_Enhanced}}" alt="mars space image">
             <p class="card-text">Syrtis Major Hemisphere Enhanced
             </p>
           </div>
@@ -111,7 +103,7 @@
 
         <div class="card bg-light">
           <div class="card-body text-center">
-            <img src={{m_hemis[0]}} alt="mars space image">
+            <img src="{{m_hemis.Valles_Marineris_Hemisphere_Enhanced}}" alt="mars space image">
             <p class="card-text">Valles Marineris Hemisphere Enhanced
 
             </p>
