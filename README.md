@@ -22,5 +22,5 @@ Study Scraping Data from the other websites and generate new website
   Slove : Wait after sending the request before excused the next one.
 
 # Output
-![](images/Mission_to_Mars_Web_Top.png)
+![](images/Mission_to_Mars_Web_Top_1.png)
 ![](images/Mission_to_Mars_Web_bottom.png)
