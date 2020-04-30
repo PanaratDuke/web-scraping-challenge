@@ -37,15 +37,16 @@
     
     <!-- 3nd Section Feature Image-->
     <div class="container-fluid"></div>
+    <div class="jumbotron text-left jumbotron_background"> 
       <!-- 1st row -->
       <section class="row">
         <!-- 1st Column -->
         <div class="col-lg-8">
-          <div class="jumbotron text-left jumbotron_background"> 
+          <!-- <div class="jumbotron text-left jumbotron_background">  -->
             <h3>Featured Mars Image</h3>
             <img src="{{m_fimg.feat_img}}" alt="mars space image" width="550" height="650" >
 
-          </div>
+          <!-- </div> -->
         </div>
             
             <!-- 2nd Column -->
@@ -53,20 +54,17 @@
         <div class="col-lg-4">
           <!--1st Row Current Weather -->
           <section>
-              <div class="jumbotron text-left">
+              <!-- <div class="jumbotron text-left"> -->
                 
                 <h3>Current Weather on Mars</h3>
                 <p>{{m_weather.mars_weather}}<p>
 
-              </div>
+              <!-- </div> -->
               <!--2nd Row Mars Facts -->
-              <div class="jumbotron text-left">
-              
-
-                  
+              <!-- <div class="jumbotron text-left">               -->
                 <h3>Mars Facts (table)</h3>
-                {{m_fact.facts | safe}}
-              </div>
+                    {{m_fact.facts | safe}}
+              <!-- </div> -->
           </section>
         </div>
       </section>
