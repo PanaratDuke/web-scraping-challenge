@@ -23,3 +23,4 @@ Mission to Mars
 
 # Output
 ![](images/Mission_to_Mars_Web_Top.png)
+![](images/Mission_to_Mars_Web_Bottom.png)
