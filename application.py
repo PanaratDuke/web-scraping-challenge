@@ -22,13 +22,7 @@ def index():
     weather=db.weather.find_one()
     facts=db.facts.find_one()
     hemispheres=db.hemis.find_one()
-    
-    # try:
-    #     news = mars_scraping.get_mars_info()
-    #     # , fimg, weat, fact, hemis
-    # except:
-    #     scrape()
-    #     news = mars_scraping.get_mars_info()
+
     return render_template(
         'index.html', 
         m_news=latest_news,

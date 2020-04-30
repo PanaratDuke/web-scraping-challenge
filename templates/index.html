@@ -41,9 +41,9 @@
       <section class="row">
         <!-- 1st Column -->
         <div class="col-lg-8">
-          <div class="jumbotron text-left"> 
+          <div class="jumbotron text-left jumbotron_background"> 
             <h3>Featured Mars Image</h3>
-            <img src="{{m_fimg.feat_img}}" alt="mars space image"width="500" height="600">
+            <img src="{{m_fimg.feat_img}}" alt="mars space image" width="550" height="650" >
 
           </div>
         </div>
@@ -73,45 +73,41 @@
     </div>
     <!-- 4nd Section Hemispheres Image-->
     <div class="container">
-      <h2>Mars Hemisphere</h2>
-      <p>The .card-columns class creates a masonry-like grid of cards. The layout will automatically adjust as you insert more cards.</p>
-      <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
-      <div class="card-columns">
+      <h2 style="text-align:center">Mars Hemisphere</h2>
+      <!-- 1st Row (2 Cards) -->
+      <!-- <div class="card-columns"> -->
+        
+        <div class="col-sm-6">
+          <div class="card" style="width:440px">
+            <div class="card-body" >
+              <img src="{{m_hemis.Cerberus_Hemisphere_Enhanced}}" alt="mars space image" width="400" height="400">
+              <h5 class="card-title">Cerberus Hemisphere Enhanced</h5>
+            </div>
+          </div>
 
-        <div class="card bg-light">
-          <div class="card-body text-center">
-            <img src="{{m_hemis.Cerberus_Hemisphere_Enhanced}}" alt="mars space image">
-            <p class="card-text">Cerberus Hemisphere Enhanced</p>
+          <div class="card" style="width:440px" >
+            <div class="card-body">
+              <img src="{{m_hemis.Schiaparelli_Hemisphere_Enhanced}}" alt="mars space image" width="400" height="400">
+              <h5 class="card-title">Schiaparelli Hemisphere Enhanced</h5>
+            </div>
           </div>
         </div>
-
-        <div class="card bg-light">
-          <div class="card-body text-center">
-            <img src="{{m_hemis.Schiaparelli_Hemisphere_Enhanced}}" alt="mars space image">
-            <p class="card-text">Schiaparelli Hemisphere Enhanced
-            </p>
+        <div class="col-sm-6">
+          <div class="card" style="width:440px">
+            <div class="card-body">
+              <img src="{{m_hemis.Syrtis_Major_Hemisphere_Enhanced}}" alt="mars space image" width="400" height="400"> 
+              <h5 class="card-title">Syrtis Major Hemisphere Enhanced</h5>
+            </div>  
           </div>
-        </div> 
 
-        <div class="card bg-light">
-          <div class="card-body text-center">
-            <img src="{{m_hemis.Syrtis_Major_Hemisphere_Enhanced}}" alt="mars space image">
-            <p class="card-text">Syrtis Major Hemisphere Enhanced
-            </p>
-          </div>
-        </div>
-
-        <div class="card bg-light">
-          <div class="card-body text-center">
-            <img src="{{m_hemis.Valles_Marineris_Hemisphere_Enhanced}}" alt="mars space image">
-            <p class="card-text">Valles Marineris Hemisphere Enhanced
-
-            </p>
+          <div class="card" style="width:440px">
+            <div class="card-body">
+              <img src="{{m_hemis.Valles_Marineris_Hemisphere_Enhanced}}" alt="mars space image" width="400" height="400">
+              <h5 class="card-title">Valles Marineris Hemisphere Enhanced</h5>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- How do you process a list? Instructor 03 -->
+      
     
   </body>
   
