@@ -7,11 +7,11 @@ Study Scraping Data from the other websites and generate new website
 
 # Programs Tools
 - Using **Jupyter Notebook** to execute Programs for writing to scrape data from 5 websites.
-  - Using **Python and Beautiful Soup** to scrape Latest News from Nasa https://mars.nasa.gov/news
-  - Using **Python and Beautiful Soup** toFeatured Space Image from JPL https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
-  - Using **Python and Beautiful Soup** toWeatther from Twitter https://twitter.com/marswxreport?lang=en
-  - Using **Panda, and Beautiful Soup** toSpace Facts from Space-Facts https://space-facts.com/mars/
-  - Using **Python and Beautiful Soup** toMars Hemispheres from USGS https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars
+  - Using **Python and Beautiful Soup** to scrape Latest News from [Nasa](https://mars.nasa.gov/news)
+  - Using **Python and Beautiful Soup** to scrape Featured Space Image from [JPL](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
+  - Using **Python and Beautiful Soup** to scrape Weatther from [Twitter](https://twitter.com/marswxreport?lang=en)
+  - Using **Panda, and Beautiful Soup** to scrape Space Facts from [Space-Facts](https://space-facts.com/mars/)
+  - Using **Python and Beautiful Soup** to scrape Mars Hemispheres from [USGS](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
 - Using **Compass Community** to connect with **Mongo Database** for storing the data from web scraping.
 - Using **VS Code** to execute **Flask** for reading data from database and shows in the website.
 
@@ -21,6 +21,5 @@ Study Scraping Data from the other websites and generate new website
 - Sending too many requests can cause the website to block the requests.
   Slove : Wait after sending the request before excused the next one.
 
-# Output
-![](images/Mission_to_Mars_Web_Top_1.png)
-![](images/Mission_to_Mars_Web_bottom.png)
+# Website
+![](images/Mission_to_Mars_Web_Top.png)
